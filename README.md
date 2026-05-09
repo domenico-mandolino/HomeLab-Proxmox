@@ -15,7 +15,7 @@ L’objectif principal est de construire une architecture fiable, évolutive et 
 
 ## 2. Objectifs du projet
 
-### 21 Objectifs principaux
+### 2.1 Objectifs principaux
 
 Les objectifs principaux sont les suivants :
 
