@@ -44,28 +44,30 @@ Contraintes techniques:
 
 ##3. Infrastructure matérielle
 
-#3.1 Serveur principal
+## 3.1 Serveur principal
 
-#Élément          #Configuration
-Modèle              Lenovo Mini PC
-CPU                 Intel i5-10600
-Cœurs / Threads     6 cœurs / 12 threads
-RAM                 16 Go DDR4
-Stockage 1          NVMe 256 Go
-Stockage 2          NVMe 500 Go
-Hyperviseur         Proxmox VE
+| Élément           | Configuration        |
+|-------------------|----------------------|
+| Modèle            | Lenovo Mini PC       |
+| CPU               | Intel i5-10600       |
+| Cœurs / Threads   | 6 cœurs / 12 threads |
+| RAM               | 16 Go DDR4           |
+| Stockage 1        | NVMe 256 Go          |
+| Stockage 2        | NVMe 500 Go          |
+| Hyperviseur       | Proxmox VE           |
 
 
-#3.2 Dimensionnement des machines virtuelles 
+## 3.2 Dimensionnement des machines virtuelles
 
-#Rôles VMs   #RAM recommandée
-Bastion SSH   512 Mo – 1 Go
-WireGuard     512 Mo
-DNS/DHCP      512 Mo
-Ansible       1 Go
-Prometheus    2-4 Go
-Grafana       1 Go
-Nextcloud     2-4 Go
+| Rôle VM       | RAM recommandée |
+|---------------|-----------------|
+| Bastion SSH   | 512 Mo – 1 Go   |
+| WireGuard     | 512 Mo          |
+| DNS/DHCP      | 512 Mo          |
+| Ansible       | 1 Go            |
+| Prometheus    | 2–4 Go          |
+| Grafana       | 1 Go            |
+| Nextcloud     | 2–4 Go          |
 
 #important :
 - éviter le surprovisionnement permanent ;
@@ -82,23 +84,26 @@ L’architecture repose sur une séparation stricte entre :
 - les postes utilisateurs.
 L’ensemble des accès d’administration doit transiter exclusivement via le VPN puis via le bastion.
 
-#4.2 Architecture réseau cible
+## 4.2 Architecture réseau cible
 
-#Réseau   #Fonction                   #Adresse
-vmbr0      Réseau LAN / management     <BASTION_IP>
-vmbr100    Réseau interne isolé        172.16.0.0/24
-WireGuard  Réseau VPN                  10.10.0.0/24
+| Réseau       | Fonction                |  Adresse        |
+|--------------|-------------------------|-----------------|
+| vmbr0        | Réseau LAN / management | `<BASTION_IP>`  |
+| vmbr100      | Réseau interne isolé    | `172.16.0.0/24` |
+| WireGuard    | Réseau VPN              | `10.10.0.0/24`  |
 
-##5. Machines virtuelles prévues
 
-#VM              #Fonction                     
-Debian VPN        Serveur WireGuard           
-Bastion           Administration sécurisée    
-DNS/DHCP 1        Services réseau              
-DNS/DHCP 2        Redondance                   
-Monitoring        Prometheus + Grafana         
-Ansible           Automatisation             
-Nextcloud         Signature PDF / IT Drive    
+## 5. Machines virtuelles prévues
+ 
+| VM         | Fonction                 |
+|------------|--------------------------|
+| Debian VPN | Serveur WireGuard        |
+| Bastion    | Administration sécurisée |
+| DNS/DHCP 1 | Services réseau          |
+| DNS/DHCP 2 | Redondance               |
+| Monitoring | Prometheus + Grafana     |
+| Ansible    | Automatisation           |
+| Nextcloud  | Signature PDF / IT Drive |
 
 
 ##6. Sécurité
@@ -113,14 +118,15 @@ Le projet repose sur les principes suivants :
 - authentification par clés ;
 - journalisation des accès.
 
-#6.2 Politique d’exposition Internet
+## 6.2 Politique d’exposition Internet
 
-Services autorisés
+### Services autorisés
 
-#Service             #Exposition Internet
-WireGuard             Oui
-SSH                   Non
-Proxmox WebUI         Non
-Bastion               Non
-Services internes     Non
+| Service           | Exposition Internet |
+|-------------------|---------------------|
+| WireGuard         | Oui                 |
+| SSH               | Non                 |
+| Proxmox WebUI     | Non                 |
+| Bastion           | Non                 |
+| Services internes | Non                 |
 
