@@ -151,13 +151,12 @@ Grafana
 
 
 # 5. Machines virtuelles prévues
-
 | VM         | Fonction                      | Niveau d’exposition     |
 | ---------- | ----------------------------- | ----------------------- |
 | Debian VPN | Serveur WireGuard             | Internet UDP uniquement |
 | Bastion    | Point d’entrée administrateur | VPN uniquement          |
-| Ansible    | Administration centralisée    | Interne uniquement      |
-| Monitoring | Supervision centralisée       | Interne uniquement      |
+| Ansible    | Administration centralisée    | VPN uniquement          |
+| Monitoring | Supervision centralisée       | VPN uniquement          |
 | DNS/DHCP 1 | Services réseau               | Interne                 |
 | DNS/DHCP 2 | Redondance réseau             | Interne                 |
 | Nextcloud  | Signature PDF / stockage IT   | VPN uniquement          |
