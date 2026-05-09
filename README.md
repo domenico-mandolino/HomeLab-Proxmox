@@ -131,3 +131,33 @@ Services autorisés
 | Bastion           | Non                 |
 | Services internes | Non                 |
 
+## Roadmap prévisionnelle
+
+### Phase 1 — Fondations
+- Installation Proxmox
+- Configuration réseau
+- Déploiement VPN
+
+### Phase 2 — Sécurisation
+
+- Bastion d’administration
+- Firewall
+- Segmentation réseau
+
+### Phase 3 — Services internes
+- DNS / DHCP
+- Supervision
+- Ansible
+
+### Phase 4 — Services complémentaires
+- Nextcloud
+- Outils internes
+
+## Perspectives d’évolution
+
+Le projet est conçu pour évoluer vers :
+- une infrastructure multi-sites ;
+- une haute disponibilité partielle ;
+- une automatisation avancée ;
+- une supervision complète ;
+- une centralisation des logs.
