@@ -1,8 +1,8 @@
 ### Infrastructure Proxmox Sécurisée
 
-##1. Présentation du projet
+## 1. Présentation du projet
 
-##1.1 Contexte
+# 1.1 Contexte
 Ce projet consiste à concevoir et déployer une infrastructure virtualisée sécurisée basée sur Proxmox VE afin de répondre aux besoins d’administration distante, de segmentation réseau et de supervision d’une PME multi-sites.
 
 L’objectif principal est de construire une architecture fiable, évolutive et sécurisée permettant :
@@ -13,9 +13,9 @@ L’objectif principal est de construire une architecture fiable, évolutive et 
 - la supervision des systèmes ;
 - la préparation à l’automatisation via Ansible.
 
-##2. Objectifs du projet
+## 2. Objectifs du projet
 
-#21 Objectifs principaux
+# 21 Objectifs principaux
 
 Les objectifs principaux sont les suivants :
 
@@ -28,7 +28,7 @@ Les objectifs principaux sont les suivants :
 - Limiter l’exposition Internet.
 - Implémenter une supervision centralisée.
 
-#2.2 Contraintes du projet
+# 2.2 Contraintes du projet
 
 Contraintes techniques:
  
@@ -42,9 +42,9 @@ Contraintes techniques:
 - Simplicité d’utilisation.
 - Limitation des coûts.
 
-##3. Infrastructure matérielle
+## 3. Infrastructure matérielle
 
-## 3.1 Serveur principal
+# 3.1 Serveur principal
 
 | Élément           | Configuration        |
 |-------------------|----------------------|
@@ -57,7 +57,7 @@ Contraintes techniques:
 | Hyperviseur       | Proxmox VE           |
 
 
-## 3.2 Dimensionnement des machines virtuelles
+# 3.2 Dimensionnement des machines virtuelles
 
 | Rôle VM       | RAM recommandée |
 |---------------|-----------------|
@@ -75,8 +75,8 @@ Contraintes techniques:
 - éviter le swap.
 
 
-##4. Architecture logique
-#4.1 Vue d’ensemble
+## . Architecture logique
+# 4.1 Vue d’ensemble
 L’architecture repose sur une séparation stricte entre :
 - le réseau de management ;
 - le réseau VPN ;
@@ -84,7 +84,7 @@ L’architecture repose sur une séparation stricte entre :
 - les postes utilisateurs.
 L’ensemble des accès d’administration doit transiter exclusivement via le VPN puis via le bastion.
 
-## 4.2 Architecture réseau cible
+# 4.2 Architecture réseau cible
 
 | Réseau       | Fonction                |  Adresse        |
 |--------------|-------------------------|-----------------|
@@ -106,9 +106,9 @@ L’ensemble des accès d’administration doit transiter exclusivement via le V
 | Nextcloud  | Signature PDF / IT Drive |
 
 
-##6. Sécurité
+## 6. Sécurité
 
-#6.1 Principes de sécurité
+# 6.1 Principes de sécurité
 
 Le projet repose sur les principes suivants :
 - principe du moindre privilège ;
@@ -120,7 +120,7 @@ Le projet repose sur les principes suivants :
 
 ## 6.2 Politique d’exposition Internet
 
-### Services autorisés
+Services autorisés
 
 | Service           | Exposition Internet |
 |-------------------|---------------------|
