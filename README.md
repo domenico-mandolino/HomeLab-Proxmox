@@ -17,7 +17,7 @@ L’objectif principal n’est pas uniquement l’hébergement de machines virtu
 
 L’infrastructure repose sur une approche orientée sécurité et administration centralisée inspirée des pratiques DevOps et Zero Trust.
 
----
+
 
 # 2. Objectifs du projet
 
@@ -36,7 +36,6 @@ Les objectifs principaux sont les suivants :
 * Centraliser les accès d’administration.
 * Préparer une architecture multi-sites.
 
----
 
 ## 2.2 Contraintes du projet
 
@@ -57,7 +56,6 @@ Les objectifs principaux sont les suivants :
 * Réduction des interventions physiques.
 * Évolutivité progressive de l’infrastructure.
 
----
 
 # 3. Infrastructure matérielle
 
@@ -73,7 +71,6 @@ Les objectifs principaux sont les suivants :
 | Stockage 2      | NVMe 500 Go          |
 | Hyperviseur     | Proxmox VE           |
 
----
 
 ## 3.2 Dimensionnement des machines virtuelles
 
@@ -95,7 +92,6 @@ Les objectifs principaux sont les suivants :
 * séparer les rôles critiques ;
 * privilégier des VM spécialisées.
 
----
 
 # 4. Architecture logique
 
@@ -115,7 +111,6 @@ Le bastion devient le point d’entrée humain unique de l’infrastructure.
 
 Ansible et la supervision sont isolés dans une zone d’administration interne distincte.
 
----
 
 ## 4.2 Architecture réseau cible
 
@@ -125,7 +120,6 @@ Ansible et la supervision sont isolés dans une zone d’administration interne 
 | vmbr100   | Réseau interne isolé    | `172.16.0.0/24`  |
 | WireGuard | Réseau VPN              | `10.10.0.0/24`   |
 
----
 
 ## 4.3 Flux d’administration
 
@@ -155,7 +149,6 @@ Prometheus
 Grafana
 ```
 
----
 
 # 5. Machines virtuelles prévues
 
@@ -169,7 +162,6 @@ Grafana
 | DNS/DHCP 2 | Redondance réseau             | Interne                 |
 | Nextcloud  | Signature PDF / stockage IT   | VPN uniquement          |
 
----
 
 # 6. Sécurité
 
@@ -188,7 +180,6 @@ Le projet repose sur les principes suivants :
 * accès VPN obligatoire ;
 * approche Zero Trust simplifiée.
 
----
 
 ## 6.2 Politique d’exposition Internet
 
@@ -204,7 +195,6 @@ Le projet repose sur les principes suivants :
 | Monitoring        | Non                 |
 | Services internes | Non                 |
 
----
 
 ## 6.3 Principes d’administration
 
@@ -219,7 +209,6 @@ Le projet repose sur les principes suivants :
 | Services internes       | Non exposés                             |
 | Journalisation          | Centralisée progressivement             |
 
----
 
 # 7. Roadmap prévisionnelle
 
@@ -230,7 +219,6 @@ Le projet repose sur les principes suivants :
 * Mise en place WireGuard
 * Validation des flux VPN
 
----
 
 ## Phase 2 — Administration sécurisée
 
@@ -240,7 +228,6 @@ Le projet repose sur les principes suivants :
 * Segmentation réseau
 * Validation des accès administratifs
 
----
 
 ## Phase 3 — Administration centralisée
 
@@ -250,7 +237,6 @@ Le projet repose sur les principes suivants :
 * Premiers playbooks
 * Administration distante des postes
 
----
 
 ## Phase 4 — Supervision
 
@@ -259,7 +245,6 @@ Le projet repose sur les principes suivants :
 * Monitoring de la flotte distante
 * Alerting
 
----
 
 ## Phase 5 — Services internes
 
@@ -268,7 +253,6 @@ Le projet repose sur les principes suivants :
 * Services internes complémentaires
 * Sauvegardes
 
----
 
 # 8. Perspectives d’évolution
 
