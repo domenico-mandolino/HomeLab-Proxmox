@@ -1,8 +1,8 @@
-### Infrastructure Proxmox Sécurisée
+#### Infrastructure Proxmox Sécurisée
 
-##1. Présentation du projet
+###1. Présentation du projet
 
-#1.1 Contexte
+##1.1 Contexte
 Ce projet consiste à concevoir et déployer une infrastructure virtualisée sécurisée basée sur Proxmox VE afin de répondre aux besoins d’administration distante, de segmentation réseau et de supervision d’une PME multi-sites.
 
 L’objectif principal est de construire une architecture fiable, évolutive et sécurisée permettant :
